@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futuristic Glasses Recommendations</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1f1c2c, #928dab);
+            margin: 0;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* Navbar container */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: #333;
+        }
+
+        /* Logo on the left */
+        .navbar .logo img {
+            height: 40px;
+        }
+
+        /* Search bar in the center */
+        .navbar .search-bar {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar .search-bar input {
+            width: 60%;
+            padding: 8px 20px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .navbar .search-bar input:focus {
+            border-color: #00aaff;
+        }
+
+        /* Links on the right */
+        .navbar .nav-links {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .navbar .nav-links a {
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .navbar .nav-links a:hover {
+            color: #0077cc;
+        }
+
+        /* Icons */
+        .navbar .nav-links i {
+            font-size: 18px;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid #00aaff;
+            animation: slide-down 1s ease-out;
+        }
+
+        section {
+            margin: 40px auto;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            max-width: 900px;
+            border-radius: 15px;
+            text-align: center;
+            animation: fade-in 1.5s ease-in-out;
+        }
+
+        h1, h2 {
+            color: #00aaff;
+        }
+
+        button {
+            padding: 15px 30px;
+            background-color: #00aaff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 20px 0;
+            transition: background-color 0.3s ease, transform 0.3s;
+        }
+
+        button:hover {
+            background-color: #0077cc;
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            position: relative;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Animations */
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slide-down {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar container -->
+    <div class="navbar">
+        <!-- Logo on the left -->
+        <div class="logo">
+            <img src="https://static.future-ready.com/media/desktop/img/design/svg/future-redy-logo-new.svg" alt="future-ready Logo">
+        </div>
+
+        <!-- Search bar in the center -->
+        <div class="search-bar">
+            <input type="text" placeholder="What are you looking for?">
+        </div>
+
+        <!-- Links on the right -->
+        <div class="nav-links">
+            <a href="#">Track Order</a>
+            <a href="#">Sign In & Sign Up</a>
+            <a href="#"><i class="fa fa-heart"></i> Profile</a>
+            <a href="#"><i class="fa fa-shopping-cart"></i> Cart</a>
+        </div>
+    </div>
+
+    <!-- Home Section -->
+    <section id="home">
+        <header>
+            <h1>Future-Ready Glasses Recommendations</h1>
+            <p>Discover glasses tailored to your facial features with our advanced face detection technology!</p>
+        </header>
+
+        <h1>Upload Your Photo</h1>
+        <p>Let our system analyze your face to recommend the best glasses for you.</p>
+        <button onclick="uploadImage()">Upload Your Photo</button>
+        <p id="output"></p>
+
+        <h1>Why Personalized Recommendations?</h1>
+        <p>Our advanced algorithm detects your face shape and suggests eyewear that's perfect for you. Stylish and fitted for your unique look.</p>
+
+        <button onclick="viewRecommendations()">View Recommended Glasses</button>
+        <div id="recommendations" class="recommendation-section">
+            <h2>Your Recommended Glasses</h2>
+            <div class="glasses-images">
+                <img src="https://via.placeholder.com/150?text=Round+Glasses" alt="Round Glasses">
+                <img src="https://via.placeholder.com/150?text=Square+Frames" alt="Square Frames">
+                <img src="https://via.placeholder.com/150?text=Rimless+Glasses" alt="Rimless Glasses">
+                <img src="https://via.placeholder.com/150?text=Cat-Eye+Glasses" alt="Cat-Eye Glasses">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h1>Contact Us</h1>
+        <p>Email: support@glassesfuturistic.com</p>
+        <p>Phone: +123-456-7890</p>
+        <p>Address: 123 Future Tech Lane, Innovation City, IF123</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Glasses Futuristic. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function uploadImage() {
+            document.getElementById('output').innerHTML = "This feature is under development.";
+        }
+
+        function viewRecommendations() {
+            var recommendations = document.getElementById('recommendations');
+            recommendations.style.display = 'block';
+            recommendations.style.animation = 'slide-up 1s ease-in-out';
+        }
+    </script>
+</body>
+</html>
